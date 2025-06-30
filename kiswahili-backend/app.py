@@ -30,3 +30,7 @@ def chat():
 @app.route("/quiz", methods=["POST"])
 def quiz():
     return jsonify({"status": "received", "message": "Quiz data saved (mock)."})
+
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({"status": "OK", "message": "Backend is live"})
